@@ -41,9 +41,8 @@
 
 	compChoice = generateComputerChoice();
 
-	//Here we create the function that occurs when the user runs out of guesses. The win count is reset to 0, the guess counter is reset to 9, the guesses so far are reset to none, and it randomly generates another letter using the function above. 
+	//Here we create the function that occurs when the user runs out of guesses. The guess counter is reset to 9, the guesses so far are reset to none, and it randomly generates another letter using the function above. 
 	function gameOver() {
-		winCount = 0;
 		guessCounter = 9;
 		guessesSoFar = [];
 		//How come you cant just call the function below? Instead you have to call the variable and make it equal to the function declared above. Don't get. Tried to simply write generateComputerChoice(); and it wouldnt work, dont know why. Also tried to write just compChoice; and that didnt work either. 
