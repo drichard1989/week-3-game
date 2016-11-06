@@ -1,58 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Comic Book Hangman!</title>
+	<title>Psychic Game</title>
 </head>
 <body>
 
 
+<h1>The Psychic Game</h1>
+<p>Guess what letter the computer is thinking of</p>
+<p>Wins:<span id="winCount"></span></p>
+<p>Losses:<span id="lossCount"></span></p>
+<p>Guesses Left:<span id="guessCounter"></span></p>
+<p>Your guesses so far:<span id="guesses"></span></p>
 
-	<script type="text/javascript">
-		
 
-		// Pseudo Code for Hangman
 
-		// 1. User hits any key to start the game
+<script type="text/javascript" src="assets/javascript/game.js">
 
-		// 2. User is presented with a series of empty slots representing a word they are trying to guess, and a word has been chosen from the array to use for the user to guess. 
+	
 
-		// 3. User guesses what letters are missing by typing letters on keyboard. Note* they only have 12 tries. 
 
-		// 4. If user guesses correctly, the letter appears in the spot it should be at in the word. If they dont, letter appears in the guessed letter area, and one life is lost. 
 
-		// 5. If letters are guessed that makes up word, then images change, and game starts again. If not, game over, and game starts again. 
-
-		var hangmanWords = ["hawkeye", "wolverine", "nightcrawler", "beast", "cyclopse", "phoenix", "cyborg", "hulk", "dr.x" "daredevil", "rocket", "groot", "starlord", "thanos", "ajax", "deadpool", "blade"];
-		
-
-		function getDisplay (wordChoice) {
-			var dashName = " ";
-			for (var i=0; i < wordChoice.length; i++)
-				{
-					dashName = dashName + "-";
-				}
-			return dashName;
-		}	
-
-		document.onkeyup = function () {
-			// userInput is the interaction with the user and the keyboard
-			var userInput = String.fromCharCode(event.keyCode).toLowerCase();
-
-			if (userInput == " ") {
-				var wordChoice = hangmanWords[Math.floor(Math.random()*hangmanWords.length)];
-
-					console.log(wordChoice);
-					
-					var dashName = getDisplay(wordChoice);
-
-					console.log(dashName)
-			}		
-		
-		}
-			// console.log(userInput);
-
-		
-
-	</script>
+</script>
 </body>
 </html>

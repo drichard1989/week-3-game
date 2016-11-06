@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Psychic Game</title>
-</head>
-<body>
-
-
-<h1>The Psychic Game</h1>
-<p>Guess what letter the computer is thinking of</p>
-<p>Wins:<span id="winCount"></span></p>
-<p>Losses:<span id="lossCount"></span></p>
-<p>Guesses Left:<span id="guessCounter"></span></p>
-<p>Your guesses so far:<span id="guesses"></span></p>
-
-
-
-<script type="text/javascript">
-
-	//This is the variable for the amount of wins. This increases when the letter is correctly guessed. 
+//This is the variable for the amount of wins. This increases when the letter is correctly guessed. 
 	var winCount = 0;
 
 	//This is the variable for the amount of losses. This increases when the letter is not guessed in 9 tries, resulting in a game over type scenario, and game overs are counted as losses.
@@ -95,10 +76,3 @@
 			document.querySelector("#guessCounter").innerHTML = guessCounter;
 			document.querySelector("#guesses").innerHTML = guessesSoFar;
 	}
-
-
-
-
-</script>
-</body>
-</html>
